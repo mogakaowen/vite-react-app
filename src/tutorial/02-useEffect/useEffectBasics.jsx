@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const CodeExample = () => {
+const UseEffectBasics = () => {
   const [value, setValue] = useState(0);
 
   const sayHello = () => {
@@ -20,4 +20,4 @@ const CodeExample = () => {
     </div>
   );
 };
-export default CodeExample;
+export default UseEffectBasics;
