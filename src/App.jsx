@@ -30,6 +30,9 @@ import FetchDataCustomHooks from "./tutorial/08-custom-hooks/fetch-data";
 import NavBarContext from "./tutorial/09-context-api/context/NavBar";
 import NavbarPropDrilling from "./tutorial/09-context-api/prop-drilling/NavBar";
 import ReducerBasics from "./tutorial/10-useReducer/useReducer";
+import LowerState from "./tutorial/11-performance/01-lower-state";
+import LowerStateChallenge from "./tutorial/11-performance/02-lower-state-challenge";
+import LowerStateHooks from "./tutorial/11-performance/03-hooks";
 
 function App() {
   return (
@@ -65,7 +68,10 @@ function App() {
       {/* <FetchDataCustomHooks /> */}
       {/* <NavBarContext /> */}
       {/* <NavbarPropDrilling /> */}
-      <ReducerBasics />
+      {/* <ReducerBasics /> */}
+      {/* <LowerState /> */}
+      {/* <LowerStateChallenge /> */}
+      <LowerStateHooks />
     </div>
   );
 }
