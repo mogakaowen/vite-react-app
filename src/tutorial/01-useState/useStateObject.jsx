@@ -7,8 +7,16 @@ const UseStateObject = () => {
     hobby: "Football",
   });
 
+  const [toggle, setToggle] = useState(true);
+
   const displayPerson = () => {
-    setPerson({ ...person, name: "Peter", hobby: "Basketball" });
+    if (toggle) {
+      setPerson({ ...person, name: "Peter", hobby: "Basketball" });
+      setToggle(false);
+    } else {
+      setPerson({ ...person, name: "John", hobby: "Football" });
+      setToggle(true);
+    }
   }; // overwrites the name and hobby properties of the person object but keeps the age property
 
   return (
@@ -18,7 +26,7 @@ const UseStateObject = () => {
       <h2>{person.age}</h2>
       <h2>Enjoys: {person.hobby}</h2>
       <button className="btn" onClick={displayPerson}>
-        Show Peter
+        Toggle
       </button>
     </>
   );
