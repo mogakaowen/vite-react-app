@@ -8,6 +8,14 @@ const ShortCircuitExamples = () => {
   const [user, setUser] = useState({ name: "john" });
   const [isEditing, setIsEditing] = useState(false);
 
+  const logout = () => {
+    setUser(null);
+  };
+
+  const login = () => {
+    setUser({ name: "john" });
+  };
+
   return (
     <div>
       {/* content inside element */}
@@ -20,31 +28,38 @@ const ShortCircuitExamples = () => {
         </div>
       )}
       {/* more info below */}
-      {!text && <h4>also works</h4>}
-      {/* toggle component */}
-      {user && <SomeComponent name={user.name} />}
+      {!text && (
+        <h4>
+          <em>Since text is false, this statement gets displayed.</em>
+        </h4>
+      )}
+
       <h2 style={{ margin: "1rem 0" }}>Ternary Operator</h2>
       {/* inside element */}
       <button className="btn">{isEditing ? "edit" : "add"}</button>
+
       {/* toggle elements/components */}
       {user ? (
-        <div>
-          <h4>hello there user {user.name}</h4>
-        </div>
+        <div>{user && <SomeComponent name={user.name} logout={logout} />}</div>
       ) : (
         <div>
           <h2>please login</h2>
+          <button className="btn" onClick={login}>
+            login
+          </button>
         </div>
       )}
     </div>
   );
 };
 
-const SomeComponent = ({ name }) => {
+const SomeComponent = ({ name, logout }) => {
   return (
     <div>
-      <h4>hello there, {name}</h4>
-      <button className="btn">log out</button>
+      <h3>hello there, {name}</h3>
+      <button className="btn" onClick={logout}>
+        log out
+      </button>
     </div>
   );
 };
