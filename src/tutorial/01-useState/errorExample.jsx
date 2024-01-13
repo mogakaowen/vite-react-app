@@ -3,7 +3,7 @@ const ErrorExample = () => {
 
   const handleCount = () => {
     count++;
-    console.log(count);
+    console.log("Count:", count);
   };
   return (
     <div>

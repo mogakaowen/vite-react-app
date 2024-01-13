@@ -38,8 +38,8 @@ import LatestReact from "./tutorial/11-performance/04-react-18";
 function App() {
   return (
     <div className="container">
-      {/* <ErrorExample /> */}
-      {/* <UseState /> */}
+      <ErrorExample />
+      <UseState />
       {/* <UseStateArray /> */}
       {/* <UseStateObject /> */}
       {/* <UseStateGotcha /> */}
@@ -73,7 +73,7 @@ function App() {
       {/* <LowerState /> */}
       {/* <LowerStateChallenge /> */}
       {/* <LowerStateHooks /> */}
-      <LatestReact />
+      {/* <LatestReact /> */}
     </div>
   );
 }
