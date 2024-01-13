@@ -17,7 +17,7 @@ const OtherInputs = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("details submitted:", shipping, framework);
+    console.log("Shipping:", shipping, "Framework:", framework);
   };
 
   return (
