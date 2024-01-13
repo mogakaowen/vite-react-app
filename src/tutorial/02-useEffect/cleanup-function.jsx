@@ -14,17 +14,17 @@ const CleanupFunction = () => {
 };
 
 const ShowHide = () => {
-  //   useEffect(() => {
-  //     console.log("Hmm, this is interesting");
-  //     const intId = setInterval(() => {
-  //       console.log("Hello from interval, I am still here");
-  //     }, 1000); // seInterval runs every 1 second even if the component is hidden
+  useEffect(() => {
+    console.log("Hmm, this is interesting");
+    const intId = setInterval(() => {
+      console.log("Hello from interval, I am still here");
+    }, 1000); // seInterval runs every 1 second even if the component is hidden
 
-  //     return () => {
-  //       console.log("Cleanup function");
-  //       clearInterval(intId); // this will clear the interval when the component is hidden
-  //     };
-  //   }, []);
+    return () => {
+      console.log("Cleanup function");
+      clearInterval(intId); // this will clear the interval when the component is hidden
+    };
+  }, []);
 
   useEffect(() => {
     const someFunc = () => {};
