@@ -8,13 +8,13 @@ import UseEffectBasics from "./tutorial/02-useEffect/useEffectBasics";
 import MultipleEffects from "./tutorial/02-useEffect/multipleEffects";
 import FetchData from "./tutorial/02-useEffect/fetch-data";
 import CleanupFunction from "./tutorial/02-useEffect/cleanup-function";
-import MultipleReturnsBasics from "./tutorial/03-conditional-endering/multiple-returns-basics";
-import MultipleReturnsFetchData from "./tutorial/03-conditional-endering/multiple-returns-fetch-data";
-import HooksRulesExample from "./tutorial/03-conditional-endering/hooks-rule";
-import ShortCircuitOverview from "./tutorial/03-conditional-endering/short-circuit-overview";
-import ShortCircuitExamples from "./tutorial/03-conditional-endering/short-circuit-examples";
-import ToggleChallenge from "./tutorial/03-conditional-endering/toggle-challenge";
-import UserChallenge from "./tutorial/03-conditional-endering/user-challenge";
+import MultipleReturnsBasics from "./tutorial/03-conditional-rendering/multiple-returns-basics";
+import MultipleReturnsFetchData from "./tutorial/03-conditional-rendering/multiple-returns-fetch-data";
+import HooksRulesExample from "./tutorial/03-conditional-rendering/hooks-rule";
+import ShortCircuitOverview from "./tutorial/03-conditional-rendering/short-circuit-overview";
+import ShortCircuitExamples from "./tutorial/03-conditional-rendering/short-circuit-examples";
+import ToggleChallenge from "./tutorial/03-conditional-rendering/toggle-challenge";
+import UserChallenge from "./tutorial/03-conditional-rendering/user-challenge";
 import Navbar from "./tutorial/04-project-structure/NavBar";
 import { Home, About } from "./tutorial/04-project-structure/Pages";
 import IndexExample from "./tutorial/04-project-structure/Example";
@@ -40,7 +40,7 @@ function App() {
     <div className="container">
       {/* <ErrorExample /> */}
       {/* <UseState /> */}
-      <UseStateArray />
+      {/* <UseStateArray /> */}
       {/* <UseStateObject /> */}
       {/* <UseStateGotcha /> */}
       {/* <UseEffectBasics /> */}
@@ -65,7 +65,7 @@ function App() {
       {/* <OtherInputs /> */}
       {/* <UncontrolledInputs /> */}
       {/* <UseRef /> */}
-      {/* <ToggleExample /> */}
+      <ToggleExample />
       {/* <FetchDataCustomHooks /> */}
       {/* <NavBarContext /> */}
       {/* <NavbarPropDrilling /> */}
