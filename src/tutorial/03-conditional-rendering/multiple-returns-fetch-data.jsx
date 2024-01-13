@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const url = "https://api.github.com/users/QuincyLarson";
+const url = "https://api.github.com/users/mogakaowen";
 
 const MultipleReturnsFetchData = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -49,7 +49,7 @@ const MultipleReturnsFetchData = () => {
       />
       <h2>{name}</h2>
       <a href={html_url}>Github Profile</a>
-      <h4>works at {company}</h4>
+      <h4>works at {company || "E & M Tech"}</h4>
       <p>{bio}</p>
     </div>
   );
