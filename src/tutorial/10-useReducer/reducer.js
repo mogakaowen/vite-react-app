@@ -1,8 +1,8 @@
-import { CLEAR_LIST, RESET_LIST, REMOVE_ITEM } from "./actions";
+import { CLEAR_LIST, RESET_LIST, REMOVE_ITEM, ADD_ITEM } from "./actions";
 import { data } from "../../data";
 
 const reducer = (state, action) => {
-  console.log("state", state);
+  console.log("Previous State", state);
   console.log("action", action);
 
   if (action.type === CLEAR_LIST) {
@@ -20,6 +20,13 @@ const reducer = (state, action) => {
 
     return { ...state, people: newPeople };
   }
+
+  if (action.type === ADD_ITEM) {
+    let newPeople = [...state.people, action.payload];
+
+    return { ...state, people: newPeople };
+  }
+
   // throw error if no matching action type
   throw new Error(`No matching "${action.type}" - action type`);
 };
