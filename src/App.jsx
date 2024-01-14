@@ -65,7 +65,7 @@ function App() {
       {/* <OtherInputs /> */}
       {/* <UncontrolledInputs /> */}
       {/* <UseRef /> */}
-      <ToggleExample />
+      {/* <ToggleExample /> */}
       {/* <FetchDataCustomHooks /> */}
       {/* <NavBarContext /> */}
       {/* <NavbarPropDrilling /> */}
@@ -73,7 +73,7 @@ function App() {
       {/* <LowerState /> */}
       {/* <LowerStateChallenge /> */}
       {/* <LowerStateHooks /> */}
-      {/* <LatestReact /> */}
+      <LatestReact />
     </div>
   );
 }

@@ -24,7 +24,7 @@ const LatestReact = () => {
     });
   };
   return (
-    <Suspense fallback={<h4>Loading...</h4>}>
+    <Suspense fallback={<h4>Loading slow component...</h4>}>
       <section>
         <form className="form">
           <input
