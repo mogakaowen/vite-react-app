@@ -1,7 +1,7 @@
 import useFetch from "./useFetch";
 import useFetchPerson from "./useFetchPerson";
 
-const url = "https://api.github.com/users/QuincyLarson";
+const url = "https://api.github.com/users/mogakaowen";
 
 const FetchData = () => {
   const { isLoading, isError, data: user } = useFetch(url);
@@ -22,7 +22,7 @@ const FetchData = () => {
         alt={name}
       />
       <h2>{name}</h2>
-      <h4>works at {company}</h4>
+      <h4>works at {company || "E & M Tech"}</h4>
       <p>{bio}</p>
     </div>
   );
