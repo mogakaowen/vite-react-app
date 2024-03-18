@@ -28,7 +28,10 @@ const MultipleReturnsFetchData = () => {
       // hide loading
       setIsLoading(false);
     };
-    fetchUser();
+
+    setTimeout(() => {
+      fetchUser();
+    }, 3000);
   }, []);
   // order matters
   // don't place user JSX before loading or error
@@ -49,7 +52,7 @@ const MultipleReturnsFetchData = () => {
       />
       <h2>{name}</h2>
       <a href={html_url}>Github Profile</a>
-      <h4>works at {company || "E & M Tech"}</h4>
+      <h4>works at {company || "Equity Bank Limited"}</h4>
       <p>{bio}</p>
     </div>
   );
