@@ -36,14 +36,16 @@ const ShortCircuitExamples = () => {
 
       <h2 style={{ margin: "1rem 0" }}>Ternary Operator</h2>
       {/* inside element */}
-      <button className="btn">{isEditing ? "edit" : "add"}</button>
+      <button className="btn" onClick={() => setIsEditing(!isEditing)}>
+        {isEditing ? "edit" : "add"}
+      </button>
 
       {/* toggle elements/components */}
       {user ? (
         <div>{user && <SomeComponent name={user.name} logout={logout} />}</div>
       ) : (
         <div>
-          <h2>please login</h2>
+          <h3>Click to login</h3>
           <button className="btn" onClick={login}>
             login
           </button>
@@ -56,7 +58,7 @@ const ShortCircuitExamples = () => {
 const SomeComponent = ({ name, logout }) => {
   return (
     <div>
-      <h3>hello there, {name}</h3>
+      <h3>Welcome back {name}!</h3>
       <button className="btn" onClick={logout}>
         log out
       </button>
