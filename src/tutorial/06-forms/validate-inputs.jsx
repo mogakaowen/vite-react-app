@@ -25,6 +25,38 @@ const ValidateInputs = () => {
     setAge(e.target.value);
   };
 
+  const handleBlur = (field) => () => {
+    switch (field) {
+      case "name":
+        if (!name.trim()) {
+          setNameError("Name is required");
+        } else {
+          setNameError("");
+        }
+        break;
+      case "email":
+        if (!email.trim()) {
+          setEmailError("Email is required");
+        } else if (!/\S+@\S+\.\S+/.test(email)) {
+          setEmailError("Invalid email format");
+        } else {
+          setEmailError("");
+        }
+        break;
+      case "age":
+        if (!age.trim()) {
+          setAgeError("Age is required");
+        } else if (isNaN(age) || parseInt(age) <= 0) {
+          setAgeError("Invalid age");
+        } else {
+          setAgeError("");
+        }
+        break;
+      default:
+        break;
+    }
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     // Reset error messages
@@ -87,6 +119,7 @@ const ValidateInputs = () => {
           className="form-input"
           value={name}
           onChange={handleNameChange}
+          onBlur={handleBlur("name")}
         />
         <div
           className="error-message"
@@ -106,6 +139,7 @@ const ValidateInputs = () => {
           className="form-input"
           value={email}
           onChange={handleEmailChange}
+          onBlur={handleBlur("email")}
         />
         <div
           className="error-message"
@@ -125,6 +159,7 @@ const ValidateInputs = () => {
           className="form-input"
           value={age}
           onChange={handleAgeChange}
+          onBlur={handleBlur("age")}
         />
         <div
           className="error-message"
