@@ -14,7 +14,7 @@ const UserContainer = () => {
         </>
       ) : (
         <>
-          <p>Please Login</p>
+          <p>Click to login</p>
           <button className="btn" onClick={login}>
             Login
           </button>

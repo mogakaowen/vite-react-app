@@ -2,8 +2,8 @@ import { CLEAR_LIST, RESET_LIST, REMOVE_ITEM, ADD_ITEM } from "./actions";
 import { data } from "../../data";
 
 const reducer = (state, action) => {
-  console.log("Previous State", state);
-  console.log("action", action);
+  console.log("Previous State:", state);
+  console.log("action:", action);
 
   if (action.type === CLEAR_LIST) {
     return { ...state, people: [] };

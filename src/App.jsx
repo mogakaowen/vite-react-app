@@ -34,6 +34,7 @@ import LowerState from "./tutorial/11-performance/01-lower-state";
 import LowerStateChallenge from "./tutorial/11-performance/02-lower-state-challenge";
 import LowerStateHooks from "./tutorial/11-performance/03-hooks";
 import LatestReact from "./tutorial/11-performance/04-react-18";
+import ValidateInputs from "./tutorial/06-forms/validate-inputs";
 
 function App() {
   return (
@@ -60,6 +61,7 @@ function App() {
       {/* <IndexExample /> */}
       {/* <List /> */}
       {/* <ControlledInputs /> */}
+      {/* <ValidateInputs /> */}
       {/* <UserChallengeForms /> */}
       {/* <MultipleInputsForms /> */}
       {/* <OtherInputs /> */}
