@@ -3,8 +3,17 @@ import { useState } from "react";
 const UseStateBasics = () => {
   const [text, setText] = useState("Initial Title");
   const handleClick = () => {
+    // if (text === "Random Title") {
+    //   setText("This is a new Title");
+    // } else {
+    //   setText("Random Title");
+    // }
     if (text === "Random Title") {
       setText("This is a new Title");
+    } else if (text === "This is a new Title") {
+      setText("This is the newest title");
+    } else if (text === "This is the newest title") {
+      setText("Just kidding, This is the actual newest title");
     } else {
       setText("Random Title");
     }
