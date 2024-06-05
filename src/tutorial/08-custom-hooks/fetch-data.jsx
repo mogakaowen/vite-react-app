@@ -20,7 +20,7 @@ const FetchData = () => {
         alt={name}
       />
       <h2>{name}</h2>
-      <h4>works at {company || "Equity Bank Limited"}</h4>
+      <h4>works at {company}</h4>
       <p>{bio}</p>
     </div>
   );
