@@ -56,9 +56,11 @@ const ControlledInputs = () => {
     }
 
     // If all validations pass, proceed with form submission
-    if (name && email && age) {
+    if (nameError === "" && emailError === "" && ageError === "") {
       setIsFormValid(true);
+    }
 
+    if (isFormValid) {
       // You can add your logic here to handle the form data
       console.log("Form submitted:", { name, email, age });
 
