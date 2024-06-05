@@ -1,5 +1,4 @@
 import useFetch from "./useFetch";
-import useFetchPerson from "./useFetchPerson";
 
 const url = "https://api.github.com/users/mogakaowen";
 
