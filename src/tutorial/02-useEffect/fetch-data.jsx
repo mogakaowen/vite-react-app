@@ -5,16 +5,15 @@ const url = "https://api.github.com/users";
 const FetchData = () => {
   const [users, setUsers] = useState([]);
 
-  const getUsers = async () => {
-    const response = await fetch(url);
-    const users = await response.json();
-    console.log("Users:", users);
-    setUsers(users);
-  }; // async function cannot be used inside useEffect directly so we create a separate function
-
   useEffect(() => {
-    console.log("useEffect");
-    getUsers();
+    const getUsers = async () => {
+      const response = await fetch(url);
+      const users = await response.json();
+      console.log("Users:", users);
+      setUsers(users);
+    }; // async function cannot be used inside useEffect directly so we create a separate function
+
+    getUsers(); // then invoke the function inside useEffect
   }, []);
 
   return (
