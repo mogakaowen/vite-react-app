@@ -29,7 +29,7 @@ const useFetch = (url) => {
     };
     // invoke fetch data
     fetchData();
-  }, []);
+  }, [url]);
 
   // order matters
   // don't place user JSX before loading or error

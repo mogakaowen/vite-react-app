@@ -5,7 +5,6 @@ const url = "https://api.github.com/users/mogakaowen";
 
 const FetchData = () => {
   const { isLoading, isError, data: user } = useFetch(url);
-  //   const { isLoading, isError, user: user } = useFetchPerson(url);
 
   if (isLoading) {
     return <h2>Loading...</h2>;
